@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskrit Guru | The Eternal Teacher</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <div class="logo">संस्कृत Guru</div>
+            <ul>
+                <li>Basics</li>
+                <li>Grammar</li>
+                <li>Shloka Search</li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <h1>Ask your Teacher</h1>
+                <p>Search for any Shloka, Word, or Grammar rule.</p>
+                
+                <div class="search-container">
+                    <input type="text" id="userInput" placeholder="e.g. Karmanye vadhikaraste or What is Sandhi?">
+                    <button onclick="askTeacher()">Seek Wisdom</button>
+                </div>
+            </section>
+
+            <section id="responseArea" class="hidden">
+                <div class="teacher-card">
+                    <div class="teacher-header">
+                        <span class="avatar">🎓</span>
+                        <h3>Guru's Explanation</h3>
+                    </div>
+                    <div id="teacherResponse"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

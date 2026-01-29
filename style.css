@@ -1,0 +1,75 @@
+:root {
+    --saffron: #f39c12;
+    --deep-orange: #e67e22;
+    --paper: #fffaf0;
+    --text: #2c3e50;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--paper);
+    color: var(--text);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--deep-orange);
+}
+
+ul { display: flex; list-style: none; gap: 20px; }
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+h1 { font-family: 'Merriweather', serif; font-size: 2.5rem; }
+
+.search-container {
+    margin-top: 30px;
+}
+
+input {
+    padding: 15px 25px;
+    width: 400px;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus { border-color: var(--saffron); }
+
+button {
+    padding: 15px 30px;
+    background: var(--deep-orange);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.teacher-card {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 8px solid var(--saffron);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hidden { display: none; }
