@@ -3,43 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanskrit Guru | The Eternal Teacher</title>
+    <title>Sanskrit Guru | AI powered Teacher</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav>
-            <div class="logo">संस्कृत Guru</div>
-            <ul>
-                <li>Basics</li>
-                <li>Grammar</li>
-                <li>Shloka Search</li>
-            </ul>
-        </nav>
-
-        <main>
-            <section class="hero">
-                <h1>Ask your Teacher</h1>
-                <p>Search for any Shloka, Word, or Grammar rule.</p>
-                
-                <div class="search-container">
-                    <input type="text" id="userInput" placeholder="e.g. Karmanye vadhikaraste or What is Sandhi?">
-                    <button onclick="askTeacher()">Seek Wisdom</button>
-                </div>
-            </section>
-
-            <section id="responseArea" class="hidden">
-                <div class="teacher-card">
-                    <div class="teacher-header">
-                        <span class="avatar">🎓</span>
-                        <h3>Guru's Explanation</h3>
-                    </div>
-                    <div id="teacherResponse"></div>
-                </div>
-            </section>
-        </main>
+    <div id="setup-screen" class="modal">
+        <div class="modal-content">
+            <h2>Welcome, Student</h2>
+            <p>To begin, please enter your Gemini API Key. (Your key stays in your browser and is never stored on a server).</p>
+            <input type="password" id="apiKeyInput" placeholder="Enter Gemini API Key">
+            <button onclick="saveApiKey()">Start Learning</button>
+            <p class="small">Don't have a key? <a href="https://aistudio.google.com/app/apikey" target="_blank">Get one here for free.</a></p>
+        </div>
     </div>
+
+    <nav>
+        <div class="logo">संस्कृत GURU</div>
+        <div class="nav-links">
+            <button onclick="clearKey()" class="text-btn">Reset API Key</button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <h1>Ask the Guru</h1>
+            <p>Paste a Shloka, ask for a Sandhi breakdown, or learn about Vibhakti.</p>
+        </div>
+
+        <div class="chat-container">
+            <div id="chatHistory"></div>
+            
+            <div class="input-area">
+                <textarea id="userInput" placeholder="Ask anything... (e.g., Explain 'Karmanye vadhikaraste' in detail)"></textarea>
+                <button id="sendBtn" onclick="askGuru()">Seek Wisdom</button>
+            </div>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
